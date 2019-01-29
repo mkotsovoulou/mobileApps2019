@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name" />
+
+    <EditText
+        android:id="@+id/customerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="e-mail" />
+
+    <EditText
+        android:id="@+id/customerEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <CheckBox
+        android:id="@+id/cheese"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="extra Cheese (0.50)" />
+
+    <CheckBox
+        android:id="@+id/bacon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bacon (0.70)" />
+
+    <CheckBox
+        android:id="@+id/tomatos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tomatos (0.30)" />
+
+    <CheckBox
+        android:id="@+id/peppers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Peppers (0.40)" />
+
+    <CheckBox
+        android:id="@+id/pepperoni"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pepperoni (0.60)" />
+
+    <TextView
+        android:id="@+id/totalPriceTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="order"
+        android:text="ORDER" />
+</LinearLayout>
