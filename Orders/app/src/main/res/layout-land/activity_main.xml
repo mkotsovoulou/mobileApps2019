@@ -24,14 +24,14 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="e-mail" />
+        android:text="@string/e_mail" />
 
     <EditText
         android:id="@+id/customerEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName" />
+        android:inputType="textEmailAddress" />
 
     <CheckBox
         android:id="@+id/cheese"

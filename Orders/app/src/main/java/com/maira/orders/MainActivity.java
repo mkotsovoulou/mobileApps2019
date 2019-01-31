@@ -27,8 +27,12 @@ public class MainActivity extends AppCompatActivity {
         double pepperoni=0.6;
         double tomatos=0.3;
         double totalPrice=plainPizza;
-        EditText n = (EditText) findViewById(R.id.customerEmail);
-        EditText e = (EditText) findViewById(R.id.customerName);
+        String emailMessage;
+        emailMessage = "You ordered a pizza with ";
+
+        String[] address = new String[1];
+        EditText e = (EditText) findViewById(R.id.customerEmail);
+        EditText n = (EditText) findViewById(R.id.customerName);
 
         String custName = n.getText().toString();
         String custMail = e.getText().toString();
@@ -42,11 +46,26 @@ public class MainActivity extends AppCompatActivity {
         CheckBox pepperoniCB = (CheckBox) findViewById(R.id.pepperoni);
         CheckBox tomatosCB = (CheckBox) findViewById(R.id.tomatos);
 
-        if (cheeseCB.isChecked()) totalPrice+=cheese;
-        if (baconCB.isChecked()) totalPrice+=bacon;
-        if (peppersCB.isChecked()) totalPrice+=peppers;
-        if (pepperoniCB.isChecked()) totalPrice+=pepperoni;
-        if (tomatosCB.isChecked()) totalPrice+=tomatos;
+        if (cheeseCB.isChecked()) {
+            totalPrice+=cheese;
+            emailMessage += " Cheese ";
+        }
+        if (baconCB.isChecked()) {
+            totalPrice+=bacon;
+            emailMessage += " Bacon ";
+        }
+        if (peppersCB.isChecked()) {
+            totalPrice+=peppers;
+            emailMessage += " Peppers ";
+        }
+        if (pepperoniCB.isChecked()) {
+            totalPrice+=pepperoni;
+            emailMessage += " Pepperoni ";
+        }
+        if (tomatosCB.isChecked()) {
+            totalPrice+=tomatos;
+            emailMessage += " Tomatoes ";
+        }
 
         Log.i("MAIRA", totalPrice+"");
 
@@ -61,6 +80,9 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),"Please type your email first...",Toast.LENGTH_LONG).show();
             else {
                 Toast.makeText(getApplicationContext(),"Your Order has been placed",Toast.LENGTH_LONG).show();
+                address[0] = custMail;
+                emailMessage += String.format(" %n and the total cost is %3.2f",totalPrice);
+                composeEmail(address, "Pizza Order", emailMessage);
             }
     }
 
