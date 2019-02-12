@@ -25,7 +25,9 @@ public class MainActivity extends AppCompatActivity {
         w = (WebView) findViewById(R.id.webv);
         WebSettings webSettings = w.getSettings();
         webSettings.setJavaScriptEnabled(true);
+        w.loadUrl("http://mairak.students.acg.edu/webviews/dice/playDice.html");
 
+<<<<<<< HEAD
         w.loadUrl("http://mairak.students.acg.edu/webviews/dice/playDice.html");
 
 
@@ -68,4 +70,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+=======
+>>>>>>> d168b2f58121a61f8e741f32edb977f25963d9a0
 }
