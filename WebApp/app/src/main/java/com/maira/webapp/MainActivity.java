@@ -18,21 +18,6 @@ public class MainActivity extends AppCompatActivity {
         WebView w = (WebView) findViewById(R.id.webv);
         WebSettings webSettings = w.getSettings();
         webSettings.setJavaScriptEnabled(true);
+        w.loadUrl("http://mairak.students.acg.edu/webviews/dice/playDice.html");
 
-        w.loadUrl("http://mairak.students.acg.edu/webviews/dd/playDice.html");
-
-
-        w.setWebViewClient(new WebViewClient() {
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                if (Uri.parse(url).getHost().length() == 0) {
-                    return false;
-                }
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-                view.getContext().startActivity(intent);
-                return true;
-
-            }
-        });
-    }
 }
