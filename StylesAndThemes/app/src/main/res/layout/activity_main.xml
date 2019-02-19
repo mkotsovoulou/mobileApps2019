@@ -5,30 +5,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:layout_margin="10dp">
 
-    <TextView
-        android:layout_width="wrap_content"
+
+    <EditText
+        android:id="@+id/userName"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
- />
+        android:ems="10"
+        android:layout_margin="30dp"
+        android:inputType="textPersonName"
+        android:text="Name" />
 
     <TextView
         android:id="@+id/textView"
-        android:text="TextView"
         style="@style/MainMenuText"
-      />
+        android:onClick="openColors"
+        android:text="@string/colors" />
 
     <TextView
         android:id="@+id/textView2"
-        android:text="TextView"
         style="@style/MainMenuText"
- />
+        android:onClick="openFonts"
+        android:text="@string/fonts" />
 
     <TextView
         android:id="@+id/textView3"
-        android:text="TextView"
         style="@style/MainMenuText"
- />
+        android:onClick="openStyles"
+        android:text="@string/styles" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="savePreferences"
+        android:text="Save Preferences" />
 
 </LinearLayout>

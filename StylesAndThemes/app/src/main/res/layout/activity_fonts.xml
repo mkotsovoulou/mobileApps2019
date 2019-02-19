@@ -6,4 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".FontsActivity">
 
+    <TextView
+        android:id="@+id/textView5"
+        style="@style/MainMenuText"
+     />
 </android.support.constraint.ConstraintLayout>

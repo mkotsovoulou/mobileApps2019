@@ -6,4 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".StylesActivity">
 
+    <TextView
+        android:id="@+id/textView6"
+        style="@style/MainMenuText" />
 </android.support.constraint.ConstraintLayout>
