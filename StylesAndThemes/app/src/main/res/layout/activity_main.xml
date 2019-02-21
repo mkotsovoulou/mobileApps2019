@@ -9,15 +9,6 @@
     android:layout_margin="10dp">
 
 
-    <EditText
-        android:id="@+id/userName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:layout_margin="30dp"
-        android:inputType="textPersonName"
-        android:text="Name" />
-
     <TextView
         android:id="@+id/textView"
         style="@style/MainMenuText"
@@ -36,11 +27,29 @@
         android:onClick="openStyles"
         android:text="@string/styles" />
 
+    <EditText
+        android:id="@+id/userName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:checked="true"
+        android:text="Dark Theme" />
+
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/aclonica"
         android:onClick="savePreferences"
-        android:text="Save Preferences" />
-
+        android:text="Save Preferences"
+        android:textSize="24sp" />
 </LinearLayout>

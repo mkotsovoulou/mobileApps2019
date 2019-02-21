@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -16,15 +18,20 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
         /* Instantiation of the preferences variable */
         mPrefs = getPreferences(MODE_PRIVATE);
         /* Read from the preferences a username */
         String username = mPrefs.getString("username", "");
+        Boolean darkTheme = mPrefs.getBoolean("darkTheme", true);
+        Log.i("Maira", "DarkTheme Selected: " + darkTheme + " username " + username);
+        setTheme(darkTheme ? R.style.DarkAppTheme : R.style.AppTheme);
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        CheckBox theme = (CheckBox) findViewById(R.id.checkBox);
+        theme.setChecked(darkTheme);
         ((EditText) findViewById(R.id.userName)).setText(username);
-       
     }
 
     /** Called when the user taps the Send button */
@@ -57,11 +64,14 @@ public class MainActivity extends AppCompatActivity {
   public void savePreferences(View view) {
      //Take the text for the username edit text and assign it to a variable
       EditText uname = (EditText) findViewById(R.id.userName);
+      CheckBox theme = (CheckBox) findViewById(R.id.checkBox);
+      Boolean darkTheme = theme.isChecked();
       String username = uname.getText().toString();
       /* open the preferences in the preferences editor to edit them */
       prefEditor = mPrefs.edit();
       /* put in the preferences the username */
       prefEditor.putString("username", username);
+      prefEditor.putBoolean("darkTheme", darkTheme);
       prefEditor.commit(); //saves the contents of the preferences editor in the file
 
       Toast toast = Toast.makeText(getApplicationContext(),

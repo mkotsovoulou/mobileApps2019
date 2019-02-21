@@ -10,7 +10,7 @@ public class ColorsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_colors_activity);
+        setContentView(R.layout.activity_colors);
 
 
         // Get the Intent that started this activity and extract the string
