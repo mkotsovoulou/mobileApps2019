@@ -1,0 +1,22 @@
+{
+"questions": [
+      {
+         "id":1,
+         "text": "Is the weather today nice and sunny?",
+         "answers": [ { "a" : "True"},  {"b": "False" } ],
+         "correct": "a"
+      },
+      {
+      "id":2,
+      "text": "What is the best weather for skiing ?",
+      "answers": [ { "a" : "Sunny"},  {"b": "Rainy"}, ,  {"c": "Hot"},  {"d": "Snowy"} ],
+      "correct": "a"
+      },
+      {
+      "id":"3",
+      "text": "How many siblings do you have ?",
+      "answers": [ { "a" : "None"},  {"b": "1"}, ,  {"c": "2"},  {"d": "more than 2"} ],
+      "correct": "d"
+      }
+   ]
+   }

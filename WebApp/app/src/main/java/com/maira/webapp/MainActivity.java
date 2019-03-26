@@ -14,7 +14,6 @@ import android.webkit.WebViewClient;
 
 public class MainActivity extends AppCompatActivity {
 
-
     WebView w;
 
     @Override
@@ -26,10 +25,6 @@ public class MainActivity extends AppCompatActivity {
         WebSettings webSettings = w.getSettings();
         webSettings.setJavaScriptEnabled(true);
         w.loadUrl("http://mairak.students.acg.edu/webviews/dice/playDice.html");
-
-<<<<<<< HEAD
-        w.loadUrl("http://mairak.students.acg.edu/webviews/dice/playDice.html");
-
 
         w.setWebViewClient(new WebViewClient() {
             @Override
@@ -69,7 +64,4 @@ public class MainActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
-=======
->>>>>>> d168b2f58121a61f8e741f32edb977f25963d9a0
 }
